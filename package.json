@@ -1,0 +1,22 @@
+{
+  "name": "cache-ok",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/step-ponomarev/cache-ok.git"
+  },
+  "author": "step-ponomarev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/step-ponomarev/cache-ok/issues"
+  },
+  "homepage": "https://github.com/step-ponomarev/cache-ok#readme",
+  "devDependencies": {
+    "typescript": "^4.7.2"
+  }
+}
