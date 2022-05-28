@@ -1,1 +1,3 @@
-export const Greeter = (name: string) => `Hello ${name}`;
+import {MyCache} from './myCache';
+
+export {MyCache}
