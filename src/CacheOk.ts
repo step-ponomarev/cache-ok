@@ -1,5 +1,6 @@
-export class MyCache<T> {
+export default class CacheOk<T> {
     private readonly namespace: string;
+
     constructor(namespace: string) {
         this.namespace = namespace;
 

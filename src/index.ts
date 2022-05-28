@@ -1,3 +1,3 @@
-import {MyCache} from './myCache';
+import CacheOk from './CacheOk';
 
-export {MyCache}
+export {CacheOk}
