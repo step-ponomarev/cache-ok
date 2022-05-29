@@ -1,3 +1,5 @@
-import CacheOk from './CacheOk';
+import {createCacheStorage} from "./cacheOkStorage";
 
-export {CacheOk}
+export {
+    createCacheStorage
+}
