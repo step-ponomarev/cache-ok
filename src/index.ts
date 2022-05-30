@@ -1,4 +1,4 @@
-import {createCacheStorage} from "./cacheOkStorage";
+import {createCacheStorage} from "./storage/factory";
 
 export {
     createCacheStorage
