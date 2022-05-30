@@ -4,7 +4,7 @@ export class CacheStorage implements IStorage {
     private readonly namespace: string;
 
     constructor(namespace: string) {
-        this.namespace = CacheStorage.isURL(namespace) ? namespace : CacheStorage.convertToUrl(namespace);
+        this.namespace = namespace;
     }
 
     public get<T extends object>(key: string): Promise<T | null> {
@@ -31,19 +31,5 @@ export class CacheStorage implements IStorage {
 
     public clear(): Promise<boolean> {
         return window.caches.delete(this.namespace);
-    }
-
-    private static isURL(maybeUrl: string): boolean {
-        try {
-            const url = new URL(maybeUrl);
-
-            return url.protocol === "http:" || url.protocol === "https:";
-        } catch (_) {
-            return false;
-        }
-    }
-
-    private static convertToUrl(str: string) {
-        return `${window.location.origin}/_cache/str`;
     }
 }
