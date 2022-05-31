@@ -2,13 +2,13 @@ import {IStorage} from './IStorage';
 import {CacheStorage} from './CacheStorage';
 import {LocalStorage} from './LocalStorage';
 
-
 export function createCacheStorage<T extends object>(namespace: string): IStorage {
+    const urlNameSpace = isURL(namespace) ? namespace : convertToUrl(namespace);
     if (!isCacheSupported()) {
-        return new LocalStorage(namespace);
+        return new LocalStorage(urlNameSpace);
     }
 
-    return new CacheStorage(isURL(namespace) ? namespace : convertToUrl(namespace));
+    return new CacheStorage(urlNameSpace);
 }
 
 function isCacheSupported(): boolean {
