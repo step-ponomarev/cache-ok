@@ -1,6 +1,6 @@
 {
-  "name": "cache-ok-storage",
-  "version": "1.0.3",
+  "name": "cache-ok",
+  "version": "1.0.0",
   "description": "",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
