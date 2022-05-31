@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "build": "cypress run --browser chrome && tsc src/**/*.ts --declaration --outDir lib --declarationDir lib",
+    "build": "cypress run --browser chrome && tsc src/index.ts --declaration --outDir lib --declarationDir lib",
     "cy:open": "cypress open",
     "cy:run:chrome": "cypress run --browser chrome"
   },
