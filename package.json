@@ -5,7 +5,9 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "build": "tsc"
+    "build": "cypress run --browser chrome && tsc src/**/*.ts --declaration --outDir lib",
+    "cy:open": "cypress open",
+    "cy:run:chrome": "cypress run --browser chrome"
   },
   "repository": {
     "type": "git",
@@ -18,6 +20,7 @@
   },
   "homepage": "https://github.com/step-ponomarev/cache-ok#readme",
   "devDependencies": {
+    "cypress": "^9.7.0",
     "typescript": "^4.7.2"
   }
 }
